@@ -52,7 +52,6 @@ import {
 } from "@codecanon/waraq"
 import { Action, ActionControls, Button } from "@codecanon/waraq/ui"
 import { CircleQuestionMark, PlusIcon } from "lucide-react"
-import React from "react"
 import { useIsBreakpoint } from "./hooks/use-breakpoint"
 
 function Toolbar() {
