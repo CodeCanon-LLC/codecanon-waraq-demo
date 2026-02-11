@@ -36,6 +36,9 @@ jobs:
 
       - name: Generate .npmrc
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+      
+      - name: Generate .env
+        run: echo "VITE_GOOGLE_FONTS_API_KEY=${{ secrets.GOOGLE_FONTS_API_KEY }}" > .env
 
       - name: Install dependencies
         run: bun install
