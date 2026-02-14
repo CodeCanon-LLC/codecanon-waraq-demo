@@ -51,7 +51,7 @@ import {
   WaraqToolbarGroup,
   WaraqToolbarSeparator,
 } from "@codecanon/waraq"
-import { Action, ActionControls, Button } from "@codecanon/waraq/ui"
+import { Action, Button } from "@codecanon/waraq/ui"
 import { CircleQuestionMark, PlusIcon } from "lucide-react"
 import { useIsBreakpoint } from "./hooks/use-breakpoint"
 
