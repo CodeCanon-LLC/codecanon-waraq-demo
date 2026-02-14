@@ -41,6 +41,7 @@ import {
   WaraqCanvas,
   WaraqContent,
   WaraqFrame,
+  WaraqHeader,
   WaraqKeyboardShortcuts,
   WaraqPane,
   WaraqPaneContent,
@@ -112,27 +113,6 @@ function LayersPanel() {
 }
 
 function PropertiesPanel() {
-  const { tool } = useWaraq()
-
-  if (tool === "select") {
-    return (
-      <WaraqPanel title="Properties">
-        <WaraqPane showFor="document">
-          <WaraqPaneTitle>Document</WaraqPaneTitle>
-          <WaraqPaneContent>
-            <Action>
-              <ActionControls>
-                <ActionPrintDocument />
-                <ActionDownloadDocument />
-              </ActionControls>
-            </Action>
-            <ActionOpenDocument />
-          </WaraqPaneContent>
-        </WaraqPane>
-      </WaraqPanel>
-    )
-  }
-
   return (
     <WaraqPanel title="Properties">
       <WaraqPane showFor="document">
@@ -141,17 +121,6 @@ function PropertiesPanel() {
           <ActionDocumentSize />
           <ActionDocumentSizePreset />
           <ActionDocumentBackground />
-        </WaraqPaneContent>
-      </WaraqPane>
-      <WaraqPane showFor="document">
-        <WaraqPaneContent>
-          <Action>
-            <ActionControls>
-              <ActionPrintDocument />
-              <ActionDownloadDocument />
-            </ActionControls>
-          </Action>
-          <ActionOpenDocument />
         </WaraqPaneContent>
       </WaraqPane>
       <WaraqPane showFor="layer">
@@ -221,6 +190,18 @@ function PropertiesPanel() {
 function App() {
   return (
     <Waraq>
+      <WaraqHeader>
+        <Action>
+          <ActionOpenDocument />
+        </Action>
+        <div className='flex-1' />
+        <Action>
+          <ActionPrintDocument />
+          <div>
+            <ActionDownloadDocument />
+          </div>
+        </Action>
+      </WaraqHeader>
       <WaraqContent>
         <LayersPanel />
 
