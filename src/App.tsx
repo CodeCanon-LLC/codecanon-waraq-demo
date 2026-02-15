@@ -42,6 +42,7 @@ import {
   WaraqContent,
   WaraqFrame,
   WaraqHeader,
+  WaraqHeaderSpacer,
   WaraqKeyboardShortcuts,
   WaraqPane,
   WaraqPaneContent,
@@ -191,16 +192,10 @@ function App() {
   return (
     <Waraq>
       <WaraqHeader>
-        <Action>
-          <ActionOpenDocument />
-        </Action>
-        <div className='flex-1' />
-        <Action>
-          <ActionPrintDocument />
-          <div>
-            <ActionDownloadDocument />
-          </div>
-        </Action>
+        <ActionOpenDocument />
+        <WaraqHeaderSpacer />
+        <ActionPrintDocument />
+        <ActionDownloadDocument />
       </WaraqHeader>
       <WaraqContent>
         <LayersPanel />
